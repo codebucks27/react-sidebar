@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+# Build Sidebar navigation menu in ReactJS with react router and framer-motion for cool page transition effects😇
+
+This repository contains code for Sidebar in ReactJS.
+
+View Demo:
+https://react-sidebar.vercel.app/
+
+If you want to learn how to create it please follow below tutorial: <br />
+Change your Branch to starter-code To get started!
+
+https://youtu.be/6HfMm9D4jpU
+
+### Images of Website:
+![Codebucks](https://github.com/codebucks27/react-sidebar/blob/main/React-Sidebar-3.png)
+![Codebucks](https://github.com/codebucks27/react-sidebar/blob/main/React-Sidebar-1.png)
+![Codebucks](https://github.com/codebucks27/react-sidebar/blob/main/React-Sidebar-2.png)
+![Codebucks](https://github.com/codebucks27/react-sidebar/blob/main/React-Sidebar-4.png)
+
+
+
+### Resources Used in This Project
+
+Svg Icons : https://fontawesome.com/ <br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
