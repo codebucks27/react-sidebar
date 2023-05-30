@@ -1,7 +1,7 @@
 import MotionHoc from "./MotionHoc";
 
 const CalenderComponent = () => {
-  return <h1>Calender</h1>;
+  return <h1>Testing</h1>;
 };
 
 const Calender = MotionHoc(CalenderComponent);
