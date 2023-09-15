@@ -233,7 +233,7 @@ const Sidebar = () => {
       <SidebarContainer>
         <Logo>
           <img src={logo} alt="logo" />
-        </Logo>
+        </Logo>y
         <SlickBar clicked={click}>
           <Item
             onClick={() => setClick(false)}
@@ -242,7 +242,7 @@ const Sidebar = () => {
             to="/"
           >
             <img src={Home} alt="Home" />
-            <Text clicked={click}>Home</Text>
+            <Text clicked={click}>Activity</Text>
           </Item>
           <Item
             onClick={() => setClick(false)}
@@ -250,7 +250,7 @@ const Sidebar = () => {
             to="/team"
           >
             <img src={Team} alt="Team" />
-            <Text clicked={click}>Team</Text>
+            <Text clicked={click}>Packages</Text>
           </Item>
           <Item
             onClick={() => setClick(false)}
@@ -258,7 +258,7 @@ const Sidebar = () => {
             to="/calender"
           >
             <img src={Calender} alt="Calender" />
-            <Text clicked={click}>Calender</Text>
+            <Text clicked={click}>Inquiry</Text>
           </Item>
           <Item
             onClick={() => setClick(false)}
@@ -266,7 +266,7 @@ const Sidebar = () => {
             to="/documents"
           >
             <img src={Documents} alt="Documents" />
-            <Text clicked={click}>Documents</Text>
+            <Text clicked={click}>Booking</Text>
           </Item>
           <Item
             onClick={() => setClick(false)}
@@ -274,7 +274,7 @@ const Sidebar = () => {
             to="/projects"
           >
             <img src={Projects} alt="Projects" />
-            <Text clicked={click}>Projects</Text>
+            <Text clicked={click}>Review</Text>
           </Item>
         </SlickBar>
 
