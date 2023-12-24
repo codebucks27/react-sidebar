@@ -1,4 +1,4 @@
-import { Route, Switch, useLocation } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import Sidebar from "./Sidebar";
 import Home from "./Pages/Home";
 import Team from "./Pages/Team";
@@ -29,14 +29,14 @@ function App() {
     <>
       <Sidebar />
       <Pages>
-        <AnimatePresence exitBeforeEnter>
-          <Switch location={location} key={location.pathname}>
-            <Route exact path="/" component={Home} />
-            <Route path="/team" component={Team} />
-            <Route path="/calender" component={Calender} />
-            <Route path="/documents" component={Documents} />
-            <Route path="/projects" component={Projects} />
-          </Switch>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/calender" element={<Calender />} />
+            <Route path="/documents" element={<Documents />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
         </AnimatePresence>
       </Pages>
     </>
