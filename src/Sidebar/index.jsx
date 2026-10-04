@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 //All the svg files
 import logo from "../assets/logo.svg";
@@ -50,13 +50,13 @@ const Button = styled.button`
   }
 
   &::before {
-    top: ${(props) => (props.clicked ? "1.5" : "1rem")};
-    transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
+    top: ${(props) => (props.$clicked ? "1.5" : "1rem")};
+    transform: ${(props) => (props.$clicked ? "rotate(135deg)" : "rotate(0)")};
   }
 
   &::after {
-    top: ${(props) => (props.clicked ? "1.2" : "1.5rem")};
-    transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
+    top: ${(props) => (props.$clicked ? "1.2" : "1.5rem")};
+    transform: ${(props) => (props.$clicked ? "rotate(-135deg)" : "rotate(0)")};
   }
 `;
 
@@ -99,7 +99,7 @@ const SlickBar = styled.ul`
   top: 6rem;
   left: 0;
 
-  width: ${(props) => (props.clicked ? "12rem" : "3.5rem")};
+  width: ${(props) => (props.$clicked ? "12rem" : "3.5rem")};
   transition: all 0.5s ease;
   border-radius: 0 30px 30px 0;
 `;
@@ -132,14 +132,14 @@ const Item = styled(NavLink)`
 `;
 
 const Text = styled.span`
-  width: ${(props) => (props.clicked ? "100%" : "0")};
+  width: ${(props) => (props.$clicked ? "100%" : "0")};
   overflow: hidden;
-  margin-left: ${(props) => (props.clicked ? "1.5rem" : "0")};
+  margin-left: ${(props) => (props.$clicked ? "1.5rem" : "0")};
   transition: all 0.3s ease;
 `;
 
 const Profile = styled.div`
-  width: ${(props) => (props.clicked ? "14rem" : "3rem")};
+  width: ${(props) => (props.$clicked ? "14rem" : "3rem")};
   height: 3rem;
 
   padding: 0.5rem 1rem;
@@ -149,7 +149,7 @@ const Profile = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: ${(props) => (props.clicked ? "9rem" : "0")};
+  margin-left: ${(props) => (props.$clicked ? "9rem" : "0")};
 
   background-color: var(--black);
   color: var(--white);
@@ -170,7 +170,7 @@ const Profile = styled.div`
 `;
 
 const Details = styled.div`
-  display: ${(props) => (props.clicked ? "flex" : "none")};
+  display: ${(props) => (props.$clicked ? "flex" : "none")};
   justify-content: space-between;
   align-items: center;
 `;
@@ -227,64 +227,59 @@ const Sidebar = () => {
 
   return (
     <Container>
-      <Button clicked={click} onClick={() => handleClick()}>
+      <Button $clicked={click} onClick={() => handleClick()}>
         Click
       </Button>
       <SidebarContainer>
         <Logo>
           <img src={logo} alt="logo" />
         </Logo>
-        <SlickBar clicked={click}>
+        <SlickBar $clicked={click}>
           <Item
             onClick={() => setClick(false)}
-            exact
-            activeClassName="active"
+            end
             to="/"
           >
             <img src={Home} alt="Home" />
-            <Text clicked={click}>Home</Text>
+            <Text $clicked={click}>Home</Text>
           </Item>
           <Item
             onClick={() => setClick(false)}
-            activeClassName="active"
             to="/team"
           >
             <img src={Team} alt="Team" />
-            <Text clicked={click}>Team</Text>
+            <Text $clicked={click}>Team</Text>
           </Item>
           <Item
             onClick={() => setClick(false)}
-            activeClassName="active"
             to="/calender"
           >
             <img src={Calender} alt="Calender" />
-            <Text clicked={click}>Calender</Text>
+            <Text $clicked={click}>Calender</Text>
           </Item>
           <Item
             onClick={() => setClick(false)}
-            activeClassName="active"
             to="/documents"
           >
             <img src={Documents} alt="Documents" />
-            <Text clicked={click}>Documents</Text>
+            <Text $clicked={click}>Documents</Text>
           </Item>
           <Item
             onClick={() => setClick(false)}
-            activeClassName="active"
             to="/projects"
           >
             <img src={Projects} alt="Projects" />
-            <Text clicked={click}>Projects</Text>
+            <Text $clicked={click}>Projects</Text>
           </Item>
         </SlickBar>
 
-        <Profile clicked={profileClick}>
+        <Profile $clicked={profileClick}>
           <img
             onClick={() => handleProfileClick()}
             src="https://picsum.photos/200"
             alt="Profile"
           />
-          <Details clicked={profileClick}>
+          <Details $clicked={profileClick}>
             <Name>
               <h4>Jhon&nbsp;Doe</h4>
               <a href="/#">view&nbsp;profile</a>
