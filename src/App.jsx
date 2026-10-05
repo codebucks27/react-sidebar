@@ -1,5 +1,5 @@
-import { Route, Routes, useLocation } from "react-router";
-import Sidebar from "./Sidebar";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Sidebar from "./Sidebar/index.jsx";
 import Home from "./Pages/Home";
 import Team from "./Pages/Team";
 import Calender from "./Pages/Calender";
@@ -31,7 +31,7 @@ function App() {
       <Pages>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route exact path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/team" element={<Team />} />
             <Route path="/calender" element={<Calender />} />
             <Route path="/documents" element={<Documents />} />

@@ -90,3 +90,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Tooling update
+
+The app now uses React 19, React Router 7, Framer Motion 14, styled-components 6, web-vitals 6, Vite 8, and Vitest 5. ESLint 9 remains compatible with its React plugin; dotenv-expand 13 preserves CRA variable expansion without command execution. The CRA sections above are retained as historical tutorial documentation.
+
+Use Bun 1.4.2 and Node 24.15+ (Node 22.22.2+ is also supported): `bun install --frozen-lockfile`, `bun run start` (or `bun run dev`, port 3000), `bun run lint`, `bun run test`, `bun run test:watch`, `bun run build`, and `bun run preview`. Production output remains in `build/`; static hosting must serve `index.html` for SPA routes.
+
+Only public `VITE_*` and `REACT_APP_*` values enter the client bundle. `VITE_*` uses Vite's env ordering; `REACT_APP_*` keeps CRA ordering and supports both `process.env` and `import.meta.env`. Optional `PUBLIC_URL` sets the asset base, which defaults to `/`.
